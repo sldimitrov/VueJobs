@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <title>Vue StartUp</title>
+</head>
+<body>
+  <div id="app">
+    <h1>
+    {{counter}}
+  </h1>
+  <button @click="clickMe">
+    Click me.
+  </button>
+</div>
+
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return({
+          counter: 0
+        })
+      },
+      methods: {
+        clickMe() {
+          this.counter += 1
+          console.log('counter was incremented +1')
+        }
+      }
+    })
+    
+    app.mount('#app')
+  </script>
+</body>
+</html>
