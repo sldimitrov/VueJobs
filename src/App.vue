@@ -3,7 +3,7 @@
 
   const name = ref('John Doe')
   const status = ref('inactive')
-  const tasks = ref(['Task 1', 'Task 2', 'Task 3'])
+  const tasks = ref(['Init task', 'Task 2', 'Task 3'])
   const newTask = ref('')
 
   const toggleStatus = () => {
@@ -22,6 +22,15 @@
       newTask.value = ''
     }
   }
+
+  const popTask = () => {
+    if (tasks.value.length > 1) {
+      tasks.value.pop()
+    } else {
+
+    }
+  }
+
 </script>
 
 <template>
@@ -36,10 +45,11 @@
     <button type="submit">Submit</button>
   </form>
 
-  <h3>Tasks</h3>
+  <h3>List of Tasks:</h3>
   <ul>
     <li v-for="task in tasks" key="task">{{task}}</li>
   </ul>
+  <button @click="popTask">Pop the last task</button>
   <br />
   <button @click="toggleStatus">Change status</button>
 </template>
