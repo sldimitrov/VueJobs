@@ -7,7 +7,7 @@
 
 <template>
   <NavBar />
-  <Hero />
+  <Hero  />
   <HomeCards />
   <JobListings />
 </template>
