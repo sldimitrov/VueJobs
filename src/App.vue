@@ -7,7 +7,7 @@
 
 <template>
   <NavBar />
-  <Hero  />
+  <Hero />
   <HomeCards />
-  <JobListings />
+  <JobListings :limit="3" :show-button="true" />
 </template>
