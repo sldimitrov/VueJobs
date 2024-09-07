@@ -7,7 +7,7 @@ defineProps({
   limit: Number,
   showButton: {
     type: Boolean,
-    default: false,
+    default: true,
   }
 })
 
