@@ -1,6 +1,6 @@
 <script setup>
 import JobItem from './JobItem.vue';
-import { reactive, defineProps, ref, onMounted } from 'vue'
+import { reactive, defineProps, onMounted } from 'vue'
 import PulseLoader from 'vue-spinner/src/PulseLoader.vue'
 import axios from 'axios';
 
